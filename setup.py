@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='es-loghandler',
-    version='0.0.2',
+    version='0.0.3',
     description='Elasticsearch log handler.',
     author='Telminov Sergey',
     url='https://github.com/telminov/python-elasticsearch-loghandler',

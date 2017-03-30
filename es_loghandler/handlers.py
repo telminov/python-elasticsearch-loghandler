@@ -14,7 +14,7 @@ class ElasticHandler(Handler):
         now = datetime.datetime.now(datetime.timezone.utc)
         elastic = elasticsearch.Elasticsearch(self.hosts)
         log_data = record.__dict__.copy()
-        log_data['pathname'] = record.pathname
+        log_data['message'] = log_data.pop('msg', '')
         log_data['@timestamp'] = now.isoformat()
         index = 'logstash-%s' % now.strftime('%Y.%m.%d')
         elastic.index(index=index, doc_type='log', body=log_data)
