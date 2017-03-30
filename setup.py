@@ -15,6 +15,6 @@ setup(
     license='The MIT License',
     test_suite='nose.collector',
     install_requires=[
-        'requests', 'elasticsearch'
+        'requests', 'elasticsearch', 'pytz'
     ],
 )
